@@ -457,7 +457,7 @@
             var ctx = s.tree.ctx;
             ctx.save();
         	ctx.beginPath();
-        	ctx.fillStyle = '#FFC0CB';
+        	ctx.fillStyle = '#3a3a3a';
             // ctx.shadowColor = 'rgb(35, 31, 32)';
             ctx.shadowBlur = 2;
         	ctx.moveTo(p.x, p.y);
@@ -471,7 +471,7 @@
     Bloom = function(tree, point, figure, color, alpha, angle, scale, place, speed) {
         this.tree = tree;
         this.point = point;
-        this.color = color || (function(p){ return p[random(0, p.length - 1)]; })(['#0a0a0a', '#d4af37', '#06b6d4', '#9dc183', '#14213d']);
+        this.color = color || (function(p){ return p[random(0, p.length - 1)]; })(['#4a4a4a', '#d4af37', '#06b6d4', '#9dc183', '#2c3e6b']);
         this.alpha = alpha || random(0.3, 1);
         this.angle = angle || random(0, 360);
         this.scale = scale || 0.1;
@@ -509,6 +509,9 @@
             }
             ctx.closePath();
             ctx.fill();
+            ctx.lineWidth = 1;
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.25)';
+            ctx.stroke();
             ctx.restore();
         },
         jump: function() {
@@ -990,7 +993,7 @@
             var ctx = s.tree.ctx;
             ctx.save();
         	ctx.beginPath();
-        	ctx.fillStyle = '#FFC0CB';
+        	ctx.fillStyle = '#3a3a3a';
             // ctx.shadowColor = 'rgb(35, 31, 32)';
             ctx.shadowBlur = 2;
         	ctx.moveTo(p.x, p.y);
@@ -1004,7 +1007,7 @@
     Bloom = function(tree, point, figure, color, alpha, angle, scale, place, speed) {
         this.tree = tree;
         this.point = point;
-        this.color = color || (function(p){ return p[random(0, p.length - 1)]; })(['#0a0a0a', '#d4af37', '#06b6d4', '#9dc183', '#14213d']);
+        this.color = color || (function(p){ return p[random(0, p.length - 1)]; })(['#4a4a4a', '#d4af37', '#06b6d4', '#9dc183', '#2c3e6b']);
         this.alpha = alpha || random(0.3, 1);
         this.angle = angle || random(0, 360);
         this.scale = scale || 0.1;
@@ -1042,6 +1045,9 @@
             }
             ctx.closePath();
             ctx.fill();
+            ctx.lineWidth = 1;
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.25)';
+            ctx.stroke();
             ctx.restore();
         },
         jump: function() {
